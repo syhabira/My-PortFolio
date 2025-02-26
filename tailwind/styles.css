@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+body{
+    font-family: 'poppins', serif;
+}
+:root {
+    --first-color: #ffc6dc;
+    --black-color: #f7f6f4;
+    --white-color: #424ba0;
+  }
+  
+  .nav-link li {
+    list-style: none; /* Remove default bullets */
+}
+
+.nav-link li a {
+    position: relative; /* Needed for absolute positioning of ::after */
+    text-decoration: none;
+}
+
+.nav-link li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--first-color);
+    transition: width 0.55s ease-in-out;
+}
+
+.nav-link li a:hover::after {
+    width: 100%;
+}
+.home__button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: .625rem 1rem;
+    border-radius: .25rem;
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--black-color)), to(var(--first-color)));
+    background-image: linear-gradient(to right, var(--black-color), var(--first-color));
+  }
+
+    .home__social-icon {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .home__social-icon:hover {
+    color: var(--first-color);
+  }
+
