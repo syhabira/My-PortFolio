@@ -48,6 +48,37 @@ body{
   }
   
   .home__social-icon:hover {
-    color: var(--first-color);
+    color: rgb(255, 152, 187);
   }
+  .home_img{
+    background-color: var(--first-color);
+    padding: 10px;
+  }
+  
+  .home__img {
+    position: absolute; 
+    z-index: var(--z-normal);
+  }
+  /* .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: var(--first-color);
+}
+
+.first {
+    left: 0;
+}
+
+.second {
+    left: 33.3%;
+}
+
+.third {
+    left: 66.6%;
+} */
+
 

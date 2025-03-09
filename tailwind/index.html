@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    <!-- FontAwesome -->
+<script
+src="https://kit.fontawesome.com/35d8865ade.js"
+crossorigin="anonymous"
+></script>
   </head>
 
 
   <body style="background-color: #f7f6f4;">
      <!-- OVERLAY -->
-     <div class="overlay"></div>
+     <div class="overlay first"></div>
+     <div class="overlay second"></div>
+     <div class="overlay third"></div>
 
   <!-- navbar -->
-  <nav class="shadow-lg border-gray-100 font-bold bg-white fixed top-0 left-0 w-full z-50">
+  <nav class="font-bold nav bg-transparent fixed top-0 left-0 w-full z-50">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
       <a href="https://instagram.com/syhaabira" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-xl whitespace-nowrap text-indigo-800">Shabiraa</span>
+      
+        <span class="self-center text-xl whitespace-nowrap text-indigo-800">Shabiraa.</span>
+        <i class="fa-solid fa-star text-pink-500"></i> 
       </a>
   
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -40,44 +48,102 @@
       </div>
     </div>
   </nav>
-  <div class="mt-20"></div>
   
 <!-- nav-end -->
 
-<!-- Hero -->
-<div class="container mx-auto h-screen flex items-start pt-50">
-    <!-- Flex container: Line + Text -->
-    <div class="flex flex-row items-center space-x-8 w-1/2">
-        <!-- Vertical Line -->
-        <div class="w-1 h-80 bg-indigo-800 rounded-md"></div>
+<!-- heroooo -->
+<!-- Centered Title -->
+<!-- <div class="w-full mb-6 mt-40">
+  <p class="text-start text-pink-500 font-semibold uppercase text-xl">My Portfolio</p>
+</div> -->
+<!-- Main Container -->
+<div class="h-screen container mx-auto h-100 flex flex-col md:flex-row items-center justify-evenly px-10 md:px-16">
+  <!-- Left Side: Text & Line -->
+  <div class="flex items-center space-x-4 md:space-x-6 lg:space-x-10 w-full md:w-3/5 mb-6 md:mb-0">
+      <!-- Vertical Line -->
+      <div class="w-1 h-80 bg-indigo-800 rounded-md anime-text"></div>
 
-        <!-- Text Content -->
-        <div>
-            <p class="text-indigo-800 font-semibold text-2xl/20">Hello, My Name Is</p>
-            <p class="text-indigo-800 font-semibold text-7xl/15">Shabira Syahla A.</p>
-            <p class="text-indigo-800 font-semibold text-2xl/20">SMK INFORMATIKA PESAT</p>
-            <div class="font-semibold mt-4">
-                <a href="#" class="text-indigo-800 hover:text-stone-400 home__button">SEE MORE</a>
-            </div>
+      <!-- Text Content -->
+      <div>
+        <p class="text-indigo-800 font-semibold text-lg leading-relaxed uppercase anime-text">Hello, my name is</p>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-indigo-900 anime-text leading-tight">
+            Shabira Syahla A.
+        </h1>
+        <p class="text-pink-400 text-2xl mt-2 font-semibold anime-text leading-relaxed">SMK Informatika Pesat Student</p>
+        <p class="text-gray-600 mt-4 anime-text max-w-md leading-relaxed">
+            Passionate about technology, creativity, and digital innovation. Let's connect and build something amazing together!
+        </p>
+        <div class="anime-text font-semibold mt-4">
+          <a href="#" class="text-indigo-800 hover:text-pink-400 home__button">SEE MORE</a>
         </div>
-    </div>
+      </div>
+  </div>
 
-    <!-- Social Icons (Fixed to Bottom Left) -->
-    <div class="absolute bottom-10 left-12 flex flex-col space-y-4 text-indigo-800 fixed">
-        <ion-icon name="logo-facebook" class="home__social-icon text-2xl"></ion-icon>
-        <ion-icon name="logo-instagram" class="home__social-icon text-2xl"></ion-icon>
-        <ion-icon name="logo-twitter" class="home__social-icon text-2xl"></ion-icon>
-    </div>
+<!-- Right Side: Image -->
+<div class="w-1/2 md:w-2/5 lg:w-1/4 flex justify-center">
+  <img 
+    src="img/shabira.jpg" 
+    alt="Profile Picture" 
+    class="w-60 h-60 md:w-64 md:h-64 lg:w-72 lg:h-72 aspect-square object-cover home_img rounded-full" 
+  >
+</div>
 
-    <!-- Image Placeholder (Right Side) -->
-    <div class="w-1/2 flex justify-center items-center">
-        <img src="img/shabira.jpg" alt="Profile Picture" class="w-80 h-80 object-cover rounded-lg">
+
+</div>
+
+
+<!-- Social Icons (Bottom Left) -->
+<div class="fixed bottom-10 left-12 flex flex-col space-y-4 text-indigo-800">
+  <ion-icon name="logo-facebook" class="home__social-icon text-2xl"></ion-icon>
+  <ion-icon name="logo-instagram" class="home__social-icon text-2xl"></ion-icon>
+  <ion-icon name="logo-twitter" class="home__social-icon text-2xl"></ion-icon>
+</div>
+
+<!-- aboutt -->
+<div class="about h-screen container mx-auto h-100 flex flex-col md:flex-row items-center justify-evenly px-10 md:px-16">
+  <div class="flex w-1/2 text-pink-500 text-xl font-bold">
+ HELLOO!!!
+  </div>
+  
+  <div class="flex w-1/2 max-w-sm bg-white border border-gray-200 rounded-4xl shadow-lg items-center space-y-4 md:space-y-6 lg:space-y-10 w-full md:w-3/5 mb-6 md:mb-0 flex-col">
+    <a href="#">
+      <img class="rounded-t-lg p-10 pb-0" src="img/E972C5E0-3398-4CF7-961E-07CE962DC0BC-removebg-preview.png" alt="" />
+    </a>
+
+    <div class="pl-10 pr-10 pb-10 ">
+      <div class="my-name flex flex-row items-center space-x-5 mb-2">
+        <h5 class="text-2xl font-bold tracking-tight text-gray-700">
+          Shabira Syahla.
+        </h5>
+        <p class="text-md font-medium text-gray-600 ">
+          She/Her
+        </p>
+      </div>
+      
+      <div class="card-contain flex flex-row items-center space-x-3">
+        <i class="fa-solid fa-cake-candles text-indigo-700"></i>
+        <p class="mt-2 text-gray-600 text-lg"> 17 September 2008.</p>
+      </div>
+      <div class="card-contain flex flex-row items-center space-x-3">
+        <i class="fa-solid fa-star text-pink-700"></i>
+        <p class="mt-2 text-gray-600 text-lg"> 16 Years Old.</p>
+      </div>
+      <div class="card-contain flex flex-row items-center space-x-3">
+        <i class="fa-solid fa-location-dot text-indigo-700"></i>
+        <p class="mt-2 text-gray-600 text-lg"> Bogor </p>
+      </div>
     </div>
+  </div>
+
 </div>
 
 
 
+
+
 <!-- script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<script src="main.js"></script>
 <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
 
 </body>
