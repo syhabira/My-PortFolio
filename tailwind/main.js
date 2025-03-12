@@ -42,3 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 gsap.from('.nav', {opacity: 0, duration: 2, delay: 2, x: 60});
 
+function showDestinationPopup(shabira) {
+    if (document.getElementById(shabira).style.visibility === "hidden") {
+      document.getElementById(shabira).style.visibility = "visible";
+    } else {
+      document.getElementById(shabira).style.visibility = "hidden";
+    }
+  }
