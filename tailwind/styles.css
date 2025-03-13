@@ -133,7 +133,7 @@ body {
   
   #popular .popular-container .card {
     width: 22rem;
-    height: 38rem;
+    height: 36rem;
     border-radius: 1rem;
     border: 1px solid #00000021;
     overflow: hidden;
@@ -147,7 +147,7 @@ body {
   
   #popular .popular-container .card .cover {
     width: 100%;
-    height: 20rem;
+    height: 18rem;
     background-size: cover;
     background-position: center 90%;
     background-color: #00000010;
@@ -157,81 +157,22 @@ body {
     padding: 1rem 1.5rem;
   }
   
-  #popular .popular-container .card .desc h2 {
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  
-  #popular .popular-container .card .desc .rating {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  #popular .popular-container .card .desc .rating p {
-    font-weight: 300;
-    color: #000000a2;
-  }
-  
-  #popular .popular-container .card .desc .rating .stars {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-  }
-  
-  #popular .popular-container .card .desc .rating .stars i {
-    color: #ffd700;
-  }
-  
-  #popular .popular-container .card .desc .price {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 0.4rem;
-  }
-  
-  #popular .popular-container .card .desc .price h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
-  
-  #popular .popular-container .card .desc .price p {
-    font-weight: 300;
-    color: #000000a2;
-  }
-  
   #popular .popular-container .card .desc .book {
-    margin-top: 1rem;
+    margin-top: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: end;
   }
-  
-  #popular .popular-container .card .desc .book .phase {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  #popular .popular-container .card .desc .book .phase p {
-    font-weight: 500;
-    color: #000000ce;
-  }
-  
-  #popular .popular-container .card .desc .book .phase i {
-    color: #000000ce;
-  }
-  
+
   #popular .popular-container .card .desc .book button {
-    color: #526049;
+    color: var(--white-color);
     padding: 1rem 2rem;
     border-radius: 4rem;
     font-weight: 500;
-    border: 1px solid #31352e;
+    border: 1px solid var(--white-color);
     background-color: transparent;
     display: flex;
-    width: 11rem;
+    width: 14rem;
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -242,26 +183,7 @@ body {
     background-color: #00000010;
     transform: translateX(2px);
     gap: 70px;
-  }
-  #popular .popular-container .card:nth-child(2) .desc .book button{
-   color: #0A3981;
-   border: 1px solid #0A3981;
-  }
-  #popular .popular-container .card:nth-child(3) .desc .book button{
-   color: #bf8a3b;
-   border: 1px solid #bf8a3b;
-  }
-  #popular .popular-container .card:nth-child(7) .desc .book button{
-   border: 1px solid #31352e;
-   color: #31352e;
-  }
-  #popular .popular-container .card:nth-child(5) .desc .book button{
-   color: #0A3981;
-   border: 1px solid #0A3981;
-  }
-  #popular .popular-container .card:nth-child(6) .desc .book button{
-   color: #487554;
-   border: 1px solid #487554;
+    width: 17rem;
   }
   #popular .swiper {
     height: 100%;
@@ -319,7 +241,7 @@ body {
     height: 90%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 2rem;
   }
@@ -341,8 +263,8 @@ body {
     font-weight: 500;
   }
   .destination-popup .container img{
-    height: 400px;
-    border-radius: 50%;
+    height: 420px;
+    border-radius: 5%;
     border-color: 2px #fff;
   }
   .destination-popup .container .card-container h1 span{
@@ -353,23 +275,11 @@ body {
   .destination-popup .container .card-container .stars{
     color: #ffa53e;
   }
-  .destination-popup .container .card-container .isi-popup{
-    background-color: #81a88138;
-    width: 30vw;
-    height: 28vh;
-    border-radius: 10%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding-top: 1rem;
-  }
   .destination-popup .container .card-container .list-popup{
     display: flex;
     gap: 3rem;
   }
-  .destination-popup .container .card-container .isi-popup:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);    
-  }
+
   .destination-popup .container .card-container .isi-popup h2{
     font-size: 1rem;
   }
@@ -384,4 +294,186 @@ body {
     position: absolute;
     top: 20%;
     left: 70%;
+  }
+
+  /* Additional custom styles beyond Tailwind */
+
+/* Form focus states */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Toast animations */
+@keyframes slideIn {
+  from {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  to {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+}
+
+.toast-enter {
+  animation: slideIn 0.3s forwards;
+}
+
+.toast-exit {
+  animation: slideOut 0.3s forwards;
+}
+
+/* Custom scrollbar for textarea */
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Form field error state */
+.field-error {
+  border-color: #ef4444 !important;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Button states */
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  #contact {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+}
+   /* Footer styles */
+   footer {
+    /* background-color: rgb(32, 23, 112); */
+     /* Soft pink background */
+    color: #4b5563;
+    padding: 3rem 0;
+    border-top: 1px solid #fbcfe8;
+    margin-top: 5rem;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: #db2777; /* Pink heading */
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #db2777; /* Pink underline */
+  }
+  
+  .footer-links {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.7rem;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+  }
+  
+  .footer-links a:hover {
+    color: #db2777; /* Pink hover state */
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: white;
+    font-size: 0.95rem;
+  }
+  
+  .contact-item svg {
+    color: #db2777; /* Pink icons */
+  }
+  
+  .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #fbcfe8;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .cover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(89, 89, 139, 0.5); /* Blue color with transparency */
+    z-index: 1;
   }
