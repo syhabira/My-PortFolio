@@ -98,6 +98,7 @@ const swiperPopular = new Swiper(".popular-container", {
     el: ".swiper-pagination",
   },
 });
+
 function showDestinationPopup(shabira) {
   if (document.getElementById(shabira).style.visibility === "hidden") {
     document.getElementById(shabira).style.visibility = "visible";
