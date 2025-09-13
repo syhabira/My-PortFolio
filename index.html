@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="styles.css">
     <!-- FontAwesome -->
@@ -45,10 +46,10 @@
     
         <div class="items-center justify-between font-semibold hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
           <ul class="nav-link flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-            <li><a href="#hero" class="block py-2 transition-color ease-in duration-100 px-3 md:p-0 relative text-indigo-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-400">Home</a></li>
-            <li><a href="#abt" class="block py-2 transition-color ease-in duration-100 px-3 md:p-0 relative text-indigo-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-400">About</a></li>
-            <li><a href="#popular" class="block py-2 transition-color ease-in duration-100 px-3 md:p-0 relative text-indigo-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-400">Projects</a></li>
-            <li><a href="#certificate" class="block py-2 transition-color ease-in duration-100 px-3 md:p-0 relative text-indigo-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-400">Certificate</a></li>
+            <li><a href="#hero" class="block py-2 transition-color ease-in duration-100 px-3 md:p-0 relative text-indigo-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-500">Home</a></li>
+            <li><a href="#abt" class="block py-2 transition-color ease-in duration-100 px-3 md:p-0 relative text-indigo-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-500">About</a></li>
+            <li><a href="#popular" class="block py-2 transition-color ease-in duration-100 px-3 md:p-0 relative text-indigo-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-500">Projects</a></li>
+            <li><a href="#certificate" class="block py-2 transition-color ease-in duration-100 px-3 md:p-0 relative text-indigo-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-500">Certificate</a></li>
           </ul>
         </div>
       </div>
@@ -56,14 +57,15 @@
     <!-- navend -->
 
     <!-- home - reduced sizes -->
-    <div id="hero" class="hero flex flex-col mx-auto px-6 md:px-16 mt-24 md:mt-28">
+    <div id="hero" class="hero flex flex-col mx-auto px-6 md:px-16 pt-30">
       <div class="text mx-auto anime-text">
         <h1 class="portfolio-title-smaller">
           My <span class="text-pink-500">Portfolio</span>
         </h1>
       </div>
       <div class="img">
-        <img src="img/WhatsApp Image 2025-03-13 at 03.00.29.jpeg" alt="" class="object-cover filter grayscale home_img w-full h-90 items-center flex mx-auto"> 
+        <img  src="img/WhatsApp Image 2025-03-13 at 03.00.29.jpeg" alt=""  class="w-screen h-100 object-cover filter grayscale home_img mx-auto"/>
+ 
       </div>
     </div>
     <!-- homend -->
@@ -170,17 +172,10 @@
     </div>
 
     <!-- Project - Improved -->
-    <section id="popular" class="py-16 px-4 md:px-10">
+    <section id="popular" class="px-4 md:px-10" style="padding-top: 90px;">
       <div class="abt-title text-3xl mx-auto text-center text-pink-500 font-bold mb-10 underline underline-offset-15 anime-text">My <span class="text-indigo-700">Projects</span></div>
       
       <div class="project-container max-w-6xl mx-auto">
-        <!-- Project Filter -->
-        <div class="project-filter flex flex-wrap justify-center gap-3 mb-10">
-          <button class="filter-btn active px-4 py-2 rounded-full bg-indigo-700 text-white hover:bg-pink-500 transition-colors duration-300" data-filter="all">All</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-indigo-800 hover:bg-pink-500 hover:text-white transition-colors duration-300" data-filter="design">Design</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-indigo-800 hover:bg-pink-500 hover:text-white transition-colors duration-300" data-filter="web">Web</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-indigo-800 hover:bg-pink-500 hover:text-white transition-colors duration-300" data-filter="other">Other</button>
-        </div>
         
         <!-- Projects Grid -->
         <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -232,22 +227,6 @@
             </div>
           </div>
           
-          <!-- Project 4 -->
-          <div class="project-card" data-category="web">
-            <div class="relative overflow-hidden rounded-xl shadow-md group">
-              <img src="project-img/wedding.png" alt="Wedding Invitation Project" class="w-full h-64 object-cover object-center transition-transform duration-500 group-hover:scale-110">
-              <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div class="p-6 w-full">
-                  <h3 class="text-white text-xl font-bold">Wedding Invitation</h3>
-                  <p class="text-gray-200 mb-4">Using Bootstrap</p>
-                  <button onclick="showProjectDetails('wedding')" class="bg-pink-500 text-white py-2 px-4 rounded-lg hover:bg-pink-600 transition-colors duration-300 w-full flex items-center justify-center gap-2">
-                    View Details <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
           <!-- Project 5 -->
           <div class="project-card" data-category="web">
             <div class="relative overflow-hidden rounded-xl shadow-md group">
@@ -267,41 +246,50 @@
       </div>
     </section>
     
-    <!-- Project Details Modal -->
-    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
-      <div class="absolute inset-0 bg-black/70" onclick="closeProjectModal()"></div>
-      <div class="relative bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 mx-4">
-        <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
-          <i class="fa-solid fa-xmark text-2xl"></i>
-        </button>
-        
-        <div id="project-content" class="mt-4">
-          <!-- Content will be dynamically inserted here -->
-        </div>
-      </div>
-    </div>
+
 
     <!-- Certificate Section - Improved -->
-    <section id="certificate" class="certificate-section py-16 px-4 md:px-16">
+    <section id="certificate" class="certificate-section px-4 md:px-16">
       <div class="abt-title text-3xl mx-auto text-center text-pink-500 font-bold mb-10 underline underline-offset-15 anime-text">My <span class="text-indigo-700">Certificate</span></div>
       
-      <div class="certificate-container max-w-4xl mx-auto">
-        <div class="certificate-wrapper relative">
-          <img src="img/WhatsApp Image 2025-03-14 at 04.55.47.jpeg" alt="My Certificate" class="w-full h-auto object-contain mx-auto shadow-lg rounded-lg border-2 border-pink-200 filter grayscale hover:grayscale-0 transition-all duration-300" />
-          
-          <div class="certificate-overlay absolute inset-0 bg-gradient-to-t from-indigo-900/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end justify-center">
-            <div class="p-4 text-center">
-              <button class="bg-pink-500 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition-colors duration-300 shadow-lg">
-                View Full Certificate
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div  
+     class="carousel carousel-center max-h-130 rounded-box w-full space-x-4 p-4 mt-5 mb-15"> 
+  
+  <a href="" class="carousel-item relative group">
+    
+    <img 
+      src="img/WhatsApp Image 2025-03-14 at 04.55.47.jpeg" 
+      class="filter grayscale group-hover:grayscale-0 ml-5 transition-all duration-300 group-hover:scale-102 ease-in w-200 h-auto object-cover rounded-box shadow-lg" 
+    />
+
+    <!-- Overlay text -->
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-box">
+      <span class="text-white text-sm font-semibold tracking-wide bg-pink-500 px-5 py-3 rounded-full hover:bg-pink-400">
+        View Full Certificate
+      </span>
+    </div>
+  </a>
+  <a href="" class="carousel-item relative group">
+
+    <img 
+      src="img/WhatsApp Image 2025-03-14 at 04.55.47.jpeg" 
+      class="filter grayscale group-hover:grayscale-0 ml-5 transition-all duration-300 group-hover:scale-102 ease-in w-200 h-auto object-cover rounded-box shadow-lg" 
+    />
+
+    <!-- Overlay text -->
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-box">
+      <span class="text-white text-sm font-semibold tracking-wide bg-pink-500 px-5 py-3 rounded-full hover:bg-pink-400">
+        View Details
+      </span>
+    </div>
+  </a>
+
+</div>
+
     </section>
 
     <!-- contact - added email button -->
-    <section id="contact" class="py-16 md:px-6 lg:px-8">
+    <section id="contact" class=" pt-5 md:px-6 lg:px-8 pb-10">
       <div class="mx-auto px-4 md:px-10 max-w-6xl">
           <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 underline underline-offset-10 decoration-pink-500 mb-4">Get In Touch</h2>
@@ -486,5 +474,6 @@
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
     <script src="main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    
   </body>
 </html>
