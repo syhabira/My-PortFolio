@@ -39,9 +39,35 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Check if reveal animations are enabled
   if (revealAnimation) {
-    gsap.to(".first", 1.5, { delay: 0.5, top: "-100%", ease: "expo.inOut" });
-    gsap.to(".second", 1.5, { delay: 0.7, top: "-100%", ease: "expo.inOut" });
-    gsap.to(".third", 1.5, { delay: 0.9, top: "-100%", ease: "expo.inOut" });
+    gsap.to(".first", {
+      duration: 1.5,
+      delay: 0.5,
+      top: "-100%",
+      ease: "expo.inOut",
+      onComplete: () => {
+        document.querySelector(".first").style.display = "none";
+      },
+    });
+
+    gsap.to(".second", {
+      duration: 1.5,
+      delay: 0.7,
+      top: "-100%",
+      ease: "expo.inOut",
+      onComplete: () => {
+        document.querySelector(".second").style.display = "none";
+      },
+    });
+
+    gsap.to(".third", {
+      duration: 1.5,
+      delay: 0.9,
+      top: "-100%",
+      ease: "expo.inOut",
+      onComplete: () => {
+        document.querySelector(".third").style.display = "none";
+      },
+    });
 
     // IMG Animation
     gsap.from(".home_img", { opacity: 0, duration: 2, delay: 2, x: 60 });
