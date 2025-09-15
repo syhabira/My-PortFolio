@@ -53,22 +53,6 @@ body {
   );
 }
 
-/* Improved social media icons */
-.social-icons {
-  transition: all 0.3s ease;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-link:hover {
-  transform: translateY(-3px);
-}
-
 .home__social-icon {
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
