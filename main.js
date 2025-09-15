@@ -1,5 +1,5 @@
 // Toggle for reveal animations - set to false to disable reveal animations
-const revealAnimation = false;
+const revealAnimation = true;
 
 function initImageCrossfade(hoverImgSelector, overlaySelector) {
   const hoverImg = document.querySelector(hoverImgSelector);
